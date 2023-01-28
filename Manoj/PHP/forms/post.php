@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 
 $activityDate = $_POST['activityDate'];
@@ -14,7 +16,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected to DB successfully \n";
+echo "Connected to DB successfully <br/>";
 
 $sql = "INSERT INTO activity (date, hours, description) VALUES ('". $activityDate ."',". $noOfHours .",'". $activityDescription ."' )";
 if (mysqli_query($conn, $sql)) {
@@ -26,3 +28,7 @@ mysqli_close($conn);
 
 
 ?>
+
+
+</body>
+</html>
